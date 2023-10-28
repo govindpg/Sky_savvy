@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>SkySavvy</title>
+       <link rel="icon" type="image/x-icon" href="pics/weather-news.png">
+       <!-- BOOTSTRAP LINKING -->
+       <link
+       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+       rel="stylesheet"
+       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+       crossorigin="anonymous"
+       />
+       <script
+       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+       crossorigin="anonymous"
+       ></script>
+
+       <!-- google fonts  -->
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+       <link
+       href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,600&display=swap"
+       rel="stylesheet"
+       />
+
+       <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+<div class="container-fluid">
+       <!-- navbar -->
+       <div class="d-flex justify-content-center">
+ <nav class="navbar mt-2 w-75 rounded-4 navb  navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">SkySavvy</a>
+                <div  class="d-flex" >
+                     <input class="form-control me-2"  id="input" type="search" placeholder="Search" aria-label="Search">
+                     <button class="btn " onclick="search()" type="submit">Search</button>
+                   </div>
+                   <div id="tim" class="time text-white"></div>
+                
+                   
+                   
+                  
+                  
+                </div>
+
+       </div>
+      
+              </div>
+            </nav>
+<!-- card try -->
+<!-- 
+       <div class="div d-flex flex-row "> -->
+              <!-- card1 -->
+              <div class="container " id="oute">
+                     <div  id="bg" class="card border-0 w-75">
+       
+                     <div class="card-body ">
+                       <h3 class=" namee text-white"></h3>
+                       <img  src="#" id="im" alt="weather icon" height="100px" width="auto"/>
+                       
+                       <h1 class=" tem text-white  ms-1 mt-3 " >30 °C</h1>
+                       <div class="row"><div class="col-12">  <h4 class=" mt-4 sta text-white ">Clouds</h4></div></div>
+      
+                     </div>
+                   </div>
+
+                   <!-- card2 -->
+
+                   <div  class="card  border-0 w-75">
+       
+                     <div class="card-body ca">
+                            <div class="row"><h2 class="text-white">Todays Highlight</h2>
+                                   <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="box"><br> 
+                                   <h3 class="text-white    text-center   " >Pressure</h3>
+                                   <div class="row ">
+                                          <div class="col-6 d-flex justify-content-center "> <h2 class="text-white pressure  fw-medium fs-4 cb ">1089 PA</h2></div>
+                                          <div class="col-6 d-flex justify-content-center"><img src="./pics/icons/water.png" width="50px" height="auto" class="im" alt="">
+                           
+                            </div></div>
+                                   </div>
+                     
+                      
+                            
+
+                                   </div>
+                                   <div class="col-lg-4 col-md-6 col-sm-12">
+                                          <div class="box"><br> 
+                                    <h3 class=" text-white   text-center tx ">humidity</h3>
+                                                
+                                                 <div class="row d-flex justify-content-center">
+                                                        <div class="col-6 d-flex justify-content-center"> <h2 class="text-white humidity  fw-medium fs-4 cb">91 %</h2></div>
+                                                        <div class="col-6   d-flex justify-content-center"> <img src="./pics/icons/humidity.png" width="50px" height="auto" class="im" alt="">
+                                               </div></div>
+                                                 </div>
+                                                
+                                                
+                           
+
+                                   </div>
+                                   <div class="col-lg-4 col-md-6 col-sm-12">
+                                          <div class="box"><br> 
+                                                 <h3 class=" text-white text-center ">Windspeed</h3>
+                                                 <div class="row">
+                                                        <div class="col-6 d-flex justify-content-center">
+                                                          <h2 class="text-white wind  fw-medium fs-4 cb">0.89 KMPH</h2>
+
+
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-center">
+                                                               <img src="./pics/icons/wind.png" class="im" width="50px" height="auto" alt=""></div>
+
+                                                        </div>
+                                                 </div>
+                           
+                                   </div>
+                            </div>
+                             
+                           
+                     </div>
+                   </div>
+
+                   <!-- card3 -->
+                   <div class="card  border-0 w-75">
+                     <div class="card-body ca">
+                            <h3 class="text-white text-center">AI Suggestion</h3>
+                            <p class="text-white text-center fs-4 mt-5 ">Its better to use
+                                   <ul class="list-unstyled text-center ai-suggestion text-white fs-4 ">
+                                     
+                                   </ul>  
+                                   <span class="text-white season fs-3"></span></p>
+                                   <br>
+                                   <h4 class="ai2 text-center text-white"></h4>
+
+
+
+                     </div>
+
+
+                   </div> 
+              </div>
+             
+
+
+
+
+
+
+     
+
+</div>
+
+
+
+
+
+       
+</body>
+<script src="./main.js"></script>
+
+</html>

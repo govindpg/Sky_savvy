@@ -1,0 +1,68 @@
+*{
+       font-family: 'Rubik', sans-serif;
+       
+
+}
+.tt{
+       position: absolute;
+       right: 103px;
+}
+body{
+       background: #0B121E;
+}
+.navb{
+       background-color: #202B3C !important;
+}
+
+
+  
+
+
+
+
+#bg{
+       background-image: url(./pic/clouds.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+}
+.ca{
+       background-color: #202B3C ;
+       border-radius: 4px !important;
+}
+
+
+
+.box{
+       background-color: #0B121E;
+       width: auto;
+       margin: 15px;
+       border-radius: 4px;
+       height: 200px;
+      
+}
+
+.cb{
+       position: absolute; 
+       margin-top: 80px;
+       margin-left: 30px;
+}
+
+.im{
+        
+       margin-top: 70px;
+}
+#oute{
+       display: none;
+}
+
+
+.card{
+       margin: 20px;
+       display: block;
+       margin-right: auto;
+       margin-left: auto;
+      
+}
+.btn{
+       background-color: #acaaaa !important      ;
+}
